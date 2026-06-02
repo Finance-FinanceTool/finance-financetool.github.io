@@ -3,33 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <meta name="keywords" content="finance, calculateur crédit, salaire net, budget mensuel, outils financiers gratuits">
-  <link rel="canonical" href="https://finance-financetool.github.io/">
 
   <title>FinanceTool - Outils financiers gratuits</title>
-  <meta name="description" content="Outils gratuits : crédit, salaire, budget et calculs financiers simples.">
+  <meta name="description" content="Outils financiers gratuits : crédit, salaire, épargne, intérêts composés.">
 
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://finance-financetool.github.io/">
+
+  <style>
+    body{
+      margin:0;
+      font-family:Arial;
+      background:linear-gradient(120deg,#0f172a,#111c3a);
+      color:white;
+    }
+
+    header{
+      text-align:center;
+      padding:50px 20px;
+    }
+
+    h1{
+      margin:0;
+      font-size:42px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:15px;
+      max-width:900px;
+      margin:auto;
+      padding:20px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:20px;
+      border-radius:12px;
+      text-decoration:none;
+      color:white;
+      transition:0.2s;
+      border:1px solid rgba(255,255,255,0.05);
+    }
+
+    .card:hover{
+      transform:scale(1.03);
+      background:#273449;
+    }
+
+    footer{
+      text-align:center;
+      opacity:0.5;
+      padding:30px;
+      font-size:14px;
+    }
+  </style>
 </head>
 
-<body style="font-family:Arial;background:#0f172a;color:white;margin:0;">
+<body>
 
-<header style="padding:30px;text-align:center;background:#111c3a;">
+<header>
   <h1>FinanceTool</h1>
-  <p>Outils financiers gratuits</p>
+  <p>Outils financiers simples et rapides</p>
 </header>
 
-<div style="max-width:800px;margin:auto;padding:20px;">
+<div class="grid">
 
-  <h2>Outils disponibles</h2>
-
-  <ul>
-    <li><a href="credit.html">Calculateur de crédit</a></li>
-    <li><a href="salaire.html">Salaire brut / net</a></li>
-    <li><a href="budget.html">Budget mensuel</a></li>
-  </ul>
+  <a class="card" href="credit.html">📊 Crédit immobilier</a>
+  <a class="card" href="salaire.html">💰 Salaire net / brut</a>
+  <a class="card" href="epargne.html">📈 Épargne mensuelle</a>
+  <a class="card" href="interet.html">📉 Intérêts composés</a>
+  <a class="card" href="tva.html">🧾 TVA</a>
 
 </div>
+
+<footer>
+  FinanceTool ©
+</footer>
 
 </body>
 </html>
