@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget mensuel - FinanceTool</title>
+  <meta name="description" content="Calcule ton budget mensuel et ton reste à vivre facilement.">
+
+  <style>
+    body{
+      font-family:Arial;
+      background:#0f172a;
+      color:white;
+      margin:0;
+      padding:20px;
+    }
+
+    .box{
+      max-width:500px;
+      margin:auto;
+      background:#1e293b;
+      padding:20px;
+      border-radius:10px;
+    }
+
+    input, button{
+      width:100%;
+      padding:10px;
+      margin-top:10px;
+    }
+
+    button{
+      background:#3b82f6;
+      color:white;
+      border:none;
+      cursor:pointer;
+    }
+
+    .result{
+      margin-top:20px;
+      font-size:18px;
+    }
+
+    a{
+      color:#60a5fa;
+      display:block;
+      margin-top:15px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>Budget mensuel</h1>
+
+<input type="number" id="revenu" placeholder="Revenu mensuel (€)">
+<input type="number" id="depenses" placeholder="Dépenses mensuelles (€)">
+
+<button onclick="calc()">Calculer</button>
+
+<div class="result" id="res"></div>
+
+<a href="index.html">← Accueil</a>
+
+</div>
+
+<script>
+function calc(){
+  let r = parseFloat(document.getElementById("revenu").value);
+  let d = parseFloat(document.getElementById("depenses").value);
+
+  if(!r || !d){
+    document.getElementById("res").innerHTML = "Valeurs invalides";
+    return;
+  }
+
+  let reste = r - d;
+
+  document.getElementById("res").innerHTML =
+    "Reste à vivre : " + reste.toFixed(2) + " €";
+}
+</script>
+
+</body>
+</html>
